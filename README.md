@@ -80,12 +80,18 @@ When a device is discovered, it will try to send an UDP packet to the device, wh
 Firewall rules may block the discovery packets. (For example, on Linux, you can use `ufw` to allow the port: `sudo ufw allow 1982/udp`. Windows should not have this issue, but you may need to allow the Deno executable in your firewall settings.)
 
 ### 🛠️ Importing the Library
+Until the first stable release is published on [deno.land/x](https://deno.land/x?query=yeelight), you can temporarily import the library using one of these options:
 
-It may change in the future, but for now, you can import the library like this:
-
+#### 🔄 Latest (may change)
 ```ts
 import { YeelightManager } from "https://raw.githubusercontent.com/RPDJF/Yeelight.ts/main/mod.ts";
 ```
+
+#### 📌 Fixed Commit (recommended for stability)
+```ts
+import { YeelightManager } from "https://raw.githubusercontent.com/RPDJF/Yeelight.ts/98cdd0f27f24173dcf29eb1b483493686e7a65ed/mod.ts";
+```
+A proper versioned import will be available once the library is published on [deno.land/x](https://deno.land/x?query=yeelight).
 
 ### 📦 Deno flags
 
